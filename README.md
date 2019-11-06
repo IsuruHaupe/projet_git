@@ -8,15 +8,15 @@ Le code source du projet se trouve dans : projet_git/myGit_project/src/myGit_pro
 Pour éxécuter le .jar, utiliser la commande suivante : java -jar myGit.jar 'argument_a_modifier' 
 
 # liste des arguments accepté 
-trouverRepos
-trouverReposNonAJour
-trouverDiffRepos (spécifier un argument cheminVersRepertoire)
-trouverDiffReposAll
-mettreAJourLocal (spécifier un argument cheminVersRepertoire)
-mettreAJourLocalAll
-mettreAJourRemote (spécifier un argument cheminVersRepertoire et un commitMessage)
-mettreAJourRemoteAll (spécifier un argument un commitMessage)
-lireFichier
+trouverRepos<br/>
+trouverReposNonAJour<br/>
+trouverDiffRepos (spécifier un argument cheminVersRepertoire)<br/>
+trouverDiffReposAll<br/>
+mettreAJourLocal (spécifier un argument cheminVersRepertoire)<br/>
+mettreAJourLocalAll<br/>
+mettreAJourRemote (spécifier un argument cheminVersRepertoire et un commitMessage)<br/>
+mettreAJourRemoteAll (spécifier un argument un commitMessage)<br/>
+lireFichier<br/>
 
 # documentaion
 Pour plus d'infos, la documentation est à votre disposition : projet_git/myGit_project/doc/
