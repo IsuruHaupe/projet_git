@@ -24,7 +24,7 @@ public class GitPush {
 		String enteredPassword = new String(console.readPassword("Please enter your password: "));
 	    Git git = new Git(this.getReposGit()); 
 		DirCache index = git.add().addFilepattern(".").call();
-		RevCommit commit = git.commit().setMessage( commitMessage ).call();
+		RevCommit commit = git.commit().setMessage(commitMessage).call();
 	    PushCommand pushCommand = git.push();
 	    pushCommand.setCredentialsProvider(new UsernamePasswordCredentialsProvider(username, enteredPassword));
 	    pushCommand.call();

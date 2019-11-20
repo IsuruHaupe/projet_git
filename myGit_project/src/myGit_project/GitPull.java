@@ -45,36 +45,6 @@ public class GitPull {
 		return pull.toString();
 	}
 	
-	public void gitDiff() throws RevisionSyntaxException, AmbiguousObjectException, IncorrectObjectTypeException, IOException {
-		ObjectReader reader = this.getReposGit().newObjectReader();
-		CanonicalTreeParser oldTreeIter = new CanonicalTreeParser();
-		ObjectId oldTree = this.getReposGit().resolve( "HEAD^{tree}" );
-		oldTreeIter.reset( reader, oldTree );
-		CanonicalTreeParser newTreeIter = new CanonicalTreeParser();
-		ObjectId newTree = this.getReposGit().resolve( "HEAD~1^{tree}" );
-		newTreeIter.reset( reader, newTree );
-		DiffFormatter df = new DiffFormatter( new ByteArrayOutputStream() );
-		df.setRepository(this.getReposGit());
-		List<DiffEntry> entries = df.scan( oldTreeIter, newTreeIter );
-		for( DiffEntry entry : entries ) {
-		  System.out.println( entry );
-		}
-	}
-	
-	public void gitPushAll(String commitMessage) throws InvalidRemoteException, TransportException, GitAPIException {
-		Console console = System.console();
-		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter username");
-		String username = sc.nextLine();  // Read user input
-		String enteredPassword = new String(console.readPassword("Please enter your password: "));
-	    Git git = new Git(this.getReposGit()); 
-		DirCache index = git.add().addFilepattern(".").call();
-		RevCommit commit = git.commit().setMessage( commitMessage ).call();
-	    PushCommand pushCommand = git.push();
-	    pushCommand.setCredentialsProvider(new UsernamePasswordCredentialsProvider(username, enteredPassword));
-	    pushCommand.call();
-	}
-	
 	
 	public void openRepos(String reposPath) throws IOException {
 		File repos = new File(reposPath);
