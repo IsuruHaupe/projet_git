@@ -6,7 +6,7 @@ import java.util.Map;
 public class Repositories implements IRepositoriesInterface{
 
 	@Override
-	public Map<String, String> getState(String... pathToRepositories) {
+	public Map<String, String> getState(String... pathToRepositories) throws java.lang.Exception {
 		Map<String, String> res = new HashMap<String, String>();
 		Repository repo = new Repository();
 		for(String elt : pathToRepositories) {
@@ -16,7 +16,7 @@ public class Repositories implements IRepositoriesInterface{
 	}
 
 	@Override
-	public Map<String, Boolean> pull(String... pathToRepositories) {
+	public Map<String, Boolean> pull(String... pathToRepositories) throws java.lang.Exception{
 		Map<String, Boolean> res = new HashMap<String, Boolean>();
 		Repository repo = new Repository();
 		for(String elt : pathToRepositories) {
@@ -26,7 +26,7 @@ public class Repositories implements IRepositoriesInterface{
 	}
 
 	@Override
-	public Map<String, Boolean> push(String... pathToRepositories) {
+	public Map<String, Boolean> push(String... pathToRepositories) throws java.lang.Exception{
 		Map<String, Boolean> res = new HashMap<String, Boolean>();
 		Repository repo = new Repository();
 		for(String elt : pathToRepositories) {

@@ -71,7 +71,7 @@ public class Repository implements IRepositoryInterface {
 	}
 
 	@Override
-	public void commit(String pathToRepository, String message) {
+	public void commit(String pathToRepository, String message) throws java.lang.Exception {
 		// initialisation
 		ProcessBuilder builder = new ProcessBuilder("/bin/bash");
 		builder.redirectErrorStream(true);
@@ -124,8 +124,7 @@ public class Repository implements IRepositoryInterface {
 		s.close();
 	}
 
-	@Override
-	public String diffs(String pathToRepository) {
+	public String diffs(String pathToRepository) throws java.lang.Exception{
 		String res = "";
 		// initialisation
 		ProcessBuilder builder = new ProcessBuilder("/bin/bash");
@@ -180,8 +179,8 @@ public class Repository implements IRepositoryInterface {
 		return res;
 	}
 
-	@Override
-	public List<String> getNotAddedFiles(String pathToRepository) {
+
+	public List<String> getNotAddedFiles(String pathToRepository) throws java.lang.Exception{
 		List<String> res = new ArrayList<String>();
 		// initialisation
 		ProcessBuilder builder = new ProcessBuilder("/bin/bash");
@@ -236,8 +235,8 @@ public class Repository implements IRepositoryInterface {
 		return res;
 	}
 
-	@Override
-	public String getState(String pathToRepository) {
+
+	public String getState(String pathToRepository) throws java.lang.Exception{
 		String res = "";
 		// initialisation
 		ProcessBuilder builder = new ProcessBuilder("/bin/bash");
@@ -292,8 +291,7 @@ public class Repository implements IRepositoryInterface {
 		return res;
 	}
 
-	@Override
-	public boolean pull(String pathToRepository) {
+	public boolean pull(String pathToRepository) throws java.lang.Exception{
 		boolean worked = true;
 		ProcessBuilder builder = new ProcessBuilder("/bin/bash");
 		builder.redirectErrorStream(true);
@@ -352,7 +350,7 @@ public class Repository implements IRepositoryInterface {
 		return worked;
 	}
 
-	public boolean pull(String pathToRepository, String username, String password) {
+	public boolean pull(String pathToRepository, String username, String password) throws java.lang.Exception{
 		boolean worked = true;
 		ProcessBuilder builder = new ProcessBuilder("/bin/bash");
 		builder.redirectErrorStream(true);
@@ -421,8 +419,8 @@ public class Repository implements IRepositoryInterface {
 		return worked;
 	}
 
-	@Override
-	public boolean push(String pathToRepository) {
+
+	public boolean push(String pathToRepository) throws java.lang.Exception{
 		boolean worked = true;
 		ProcessBuilder builder = new ProcessBuilder("/bin/bash");
 		builder.redirectErrorStream(true);
@@ -481,8 +479,8 @@ public class Repository implements IRepositoryInterface {
 		return worked;
 	}
 
-	@Override
-	public boolean push(String pathToRepository, String username, String password) {
+
+	public boolean push(String pathToRepository, String username, String password)throws java.lang.Exception {
 		boolean worked = true;
 		ProcessBuilder builder = new ProcessBuilder("/bin/bash");
 		builder.redirectErrorStream(true);
@@ -551,8 +549,8 @@ public class Repository implements IRepositoryInterface {
 		return worked;
 	}
 
-	@Override
-	public Map<String, String> status(String pathToRepository) {
+
+	public Map<String, String> status(String pathToRepository) throws java.lang.Exception{
 		String output;
 		Map<String, String> res = new HashMap<String, String>();
 		// initialisation
@@ -631,7 +629,7 @@ public class Repository implements IRepositoryInterface {
 		return res;
 	}
 
-	private String getOriginalRepository() {
+	private String getOriginalRepository() throws java.lang.Exception{
 		String res = "";
 		// initialisation
 		ProcessBuilder builder = new ProcessBuilder("/bin/bash");

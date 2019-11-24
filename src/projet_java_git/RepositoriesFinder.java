@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class RepositoriesFinder implements IRepositoriesFinderInterface{
+public class RepositoriesFinder implements IRepositoriesFinderInterface {
 	public List<String> findRepositoriesInDirectory(String directoryPath) throws java.lang.Exception {
 		List<String >tmp = null, listeRepos = new ArrayList<String>();
 		try (Stream<Path> walk = Files.walk(Paths.get(directoryPath))) {
