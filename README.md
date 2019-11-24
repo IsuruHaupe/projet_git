@@ -2,7 +2,7 @@
 Projet java pour vérifier si ses projets git sont à jours, pouvoir les push, regarder les diffs, à partir d'un point d'entrée.
 
 # code source 
-Le code source du projet se trouve dans : projet_git/src/projet_java_git/
+Le code source du projet se trouve dans : projet_git/src/
 
 # execution 
 Pour éxécuter le projet utiliser le main.
