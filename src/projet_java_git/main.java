@@ -11,8 +11,6 @@ public class main {
 
 	public static void main(String[] args) {
 		System.out.println("Début du programme.");
-		Repository repo = new Repository();
-		RepositoriesFinder reposFinder = new RepositoriesFinder();
 		try {
 			//repo.add("/Users/isuruhaupe/Desktop/Imt_Atlantique/ACDC/projet_ACDC/donnees/learn_math_fast",
 			//		"newfile_zezieu.txt", 
