@@ -41,9 +41,9 @@ public class main {
 			*/
 			
 			control.addReposFromDirectory("/Users/isuruhaupe/Desktop/Imt_Atlantique/ACDC/projet_ACDC/donnees");
-			/*for(String elt : control.getRepos()) {
+			for(String elt : control.getRepos()) {
 				System.out.println("directory : " + elt);
-			}*/
+			}
 			
 			
 			//Map<String, Boolean> res = control.pushAll();
@@ -55,7 +55,7 @@ public class main {
 			//Map<String, String> res = control.getAllStates();
 			//System.out.println(res.toString());
 			
-			control.saveReposToFile("/Users/isuruhaupe/Desktop/Imt_Atlantique/ACDC/projet_ACDC/donnees/test.txt");
+			//control.saveReposToFile("/Users/isuruhaupe/Desktop/Imt_Atlantique/ACDC/projet_ACDC/donnees/test.txt");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

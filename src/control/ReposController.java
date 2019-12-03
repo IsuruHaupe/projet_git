@@ -10,9 +10,10 @@ import java.util.Map;
 
 import projet_java_git.Repositories;
 import projet_java_git.RepositoriesFinder;
+import projet_java_git.Repository;
 
 
-public class ReposController implements IReposControllerInterface {
+public class ReposController extends Repository implements IReposControllerInterface {
 	private List<String> listeRepos = new ArrayList<String>();
 	
 	@Override
